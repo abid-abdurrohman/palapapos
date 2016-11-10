@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/about_us"
+        android:title="ABOUT US" />
+    <item
+        android:id="@+id/privacy_policy"
+        android:title="PRIVACY POLICY" />
+    <item
+        android:id="@+id/term_of_use"
+        android:title="TERM OF USE" />
+    <item
+        android:id="@+id/info_iklan"
+        android:title="INFO IKLAN" />
+    <item
+        android:id="@+id/redaksi"
+        android:title="REDAKSI" />
+    <item
+        android:id="@+id/contact_us"
+        android:title="CONTACT US" />
+</menu>

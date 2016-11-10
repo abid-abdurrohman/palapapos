@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:title="HOME"/>
+        <item
+            android:id="@+id/berita_terkini"
+            android:title="BERITA TERKINI"/>
+        <item
+            android:id="@+id/berita_terpopuler"
+            android:title="BERITA TERPOPULER"/>
+    </group>
+
+    <item
+        android:title="KATEGORI">
+        <menu>
+            <item
+                android:id="@+id/nasional"
+                android:icon="@drawable/ic_menu_send"
+                android:title="NASIONAL" />
+            <item
+                android:id="@+id/nusantara"
+                android:icon="@drawable/ic_menu_send"
+                android:title="NUSANTARA" />
+            <item
+                android:id="@+id/megapolitan"
+                android:icon="@drawable/ic_menu_send"
+                android:title="MEGAPOLITAN" />
+            <item
+                android:id="@+id/politik"
+                android:icon="@drawable/ic_menu_send"
+                android:title="POLITIK" />
+            <item
+                android:id="@+id/ekonomi"
+                android:icon="@drawable/ic_menu_send"
+                android:title="EKONOMI" />
+            <item
+                android:id="@+id/hukum"
+                android:icon="@drawable/ic_menu_send"
+                android:title="HUKUM" />
+            <item
+                android:id="@+id/komunitas"
+                android:icon="@drawable/ic_menu_send"
+                android:title="KOMUNITAS" />
+            <item
+                android:id="@+id/budaya"
+                android:icon="@drawable/ic_menu_send"
+                android:title="BUDAYA" />
+            <item
+                android:id="@+id/artikel"
+                android:icon="@drawable/ic_menu_send"
+                android:title="ARTIKEL" />
+            <item
+                android:id="@+id/olahraga"
+                android:icon="@drawable/ic_menu_send"
+                android:title="OLAHRAGA" />
+            <item
+                android:id="@+id/video"
+                android:icon="@drawable/ic_menu_send"
+                android:title="VIDEO" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Palapapos</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_nasional">Nasional</string>
+    <string name="title_activity_terkini">Berita Terkini</string>
+    <string name="title_activity_terpopuler">Berita Terpopuler</string>
+</resources>
