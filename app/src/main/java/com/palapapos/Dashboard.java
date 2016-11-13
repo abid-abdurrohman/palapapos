@@ -17,7 +17,17 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.palapapos.Artikel.Artikel;
+import com.palapapos.Budaya.Budaya;
+import com.palapapos.Ekonomi.Ekonomi;
+import com.palapapos.Hukum.Hukum;
+import com.palapapos.Komunitas.Komunitas;
+import com.palapapos.Megapolitan.Megapolitan;
 import com.palapapos.Nasional.Nasional;
+import com.palapapos.Nusantara.Nusantara;
+import com.palapapos.Olahraga.Olahraga;
+import com.palapapos.Politik.Politik;
+import com.palapapos.Video.Video;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -136,25 +146,35 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             Intent i = new Intent(Dashboard.this, Nasional.class);
             startActivity(i);
         } else if (id == R.id.nusantara) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/2/nusantara.html");
+            Intent i = new Intent(Dashboard.this, Nusantara.class);
+            startActivity(i);
         } else if (id == R.id.megapolitan) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/3/megapolitan.html");
+            Intent i = new Intent(Dashboard.this, Megapolitan.class);
+            startActivity(i);
         } else if (id == R.id.politik) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/4/politik.html");
+            Intent i = new Intent(Dashboard.this, Politik.class);
+            startActivity(i);
         } else if (id == R.id.ekonomi) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/5/ekonomi.html");
+            Intent i = new Intent(Dashboard.this, Ekonomi.class);
+            startActivity(i);
         } else if (id == R.id.hukum) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/6/Hukum.html");
+            Intent i = new Intent(Dashboard.this, Hukum.class);
+            startActivity(i);
         } else if (id == R.id.komunitas) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/7/komunitas.html");
+            Intent i = new Intent(Dashboard.this, Komunitas.class);
+            startActivity(i);
         } else if (id == R.id.budaya) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/8/budaya.html");
+            Intent i = new Intent(Dashboard.this, Budaya.class);
+            startActivity(i);
         } else if (id == R.id.artikel) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/9/artikel.html");
+            Intent i = new Intent(Dashboard.this, Artikel.class);
+            startActivity(i);
         } else if (id == R.id.olahraga) {
-            myWebView.loadUrl("http://www.palapapos.co.id/kanal/10/olahraga.html");
+            Intent i = new Intent(Dashboard.this, Olahraga.class);
+            startActivity(i);
         } else if (id == R.id.video) {
-            myWebView.loadUrl("http://www.palapapos.co.id/video.html");
+            Intent i = new Intent(Dashboard.this, Video.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -15,4 +15,14 @@
     <string name="title_activity_info_iklan">Info Iklan</string>
     <string name="title_activity_redaksi">Redaksi</string>
     <string name="title_activity_contact_us">Contact Us</string>
+    <string name="title_activity_nusantara">Nusantara</string>
+    <string name="title_activity_megapolitan">Megapolitan</string>
+    <string name="title_activity_politik">Politik</string>
+    <string name="title_activity_ekonomi">Ekonomi</string>
+    <string name="title_activity_hukum">Hukum</string>
+    <string name="title_activity_komunitas">Komunitas</string>
+    <string name="title_activity_budaya">Budaya</string>
+    <string name="title_activity_artikel">Artikel</string>
+    <string name="title_activity_olahraga">Olahraga</string>
+    <string name="title_activity_video">Video</string>
 </resources>
