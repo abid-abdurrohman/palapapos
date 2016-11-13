@@ -24,11 +24,11 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Nasional"
+            android:name=".Nasional.Nasional"
             android:label="@string/title_activity_nasional"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".NasionalTerkini" />
-        <activity android:name=".NasionalTerpopuler" />
+        <activity android:name=".Nasional.NasionalTerkini" />
+        <activity android:name=".Nasional.NasionalTerpopuler" />
         <activity
             android:name=".Terkini"
             android:label="@string/title_activity_terkini"
@@ -36,6 +36,30 @@
         <activity
             android:name=".Terpopuler"
             android:label="@string/title_activity_terpopuler"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/title_activity_about_us"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PrivacyPolicy"
+            android:label="@string/title_activity_privacy_policy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TermOfUse"
+            android:label="@string/title_activity_term_of_use"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InfoIklan"
+            android:label="@string/title_activity_info_iklan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Redaksi"
+            android:label="@string/title_activity_redaksi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ContactUs"
+            android:label="@string/title_activity_contact_us"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

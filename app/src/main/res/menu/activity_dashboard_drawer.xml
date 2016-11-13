@@ -1,64 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/group1" android:checkableBehavior="single">
         <item
             android:id="@+id/home"
             android:title="HOME"/>
+    </group>
+    <group android:id="@+id/group2" android:checkableBehavior="single" >
         <item
             android:id="@+id/berita_terkini"
             android:title="BERITA TERKINI"/>
+    </group>
+    <group android:id="@+id/group3" android:checkableBehavior="single" >
         <item
             android:id="@+id/berita_terpopuler"
             android:title="BERITA TERPOPULER"/>
     </group>
 
     <item
-        android:title="KATEGORI">
+        android:title="KATEGORI"
+        android:enabled="true">
         <menu>
             <item
                 android:id="@+id/nasional"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_markunread_mailbox_white_24dp"
                 android:title="NASIONAL" />
             <item
                 android:id="@+id/nusantara"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_public_white_24dp"
                 android:title="NUSANTARA" />
             <item
                 android:id="@+id/megapolitan"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_location_city_white_24dp"
                 android:title="MEGAPOLITAN" />
             <item
                 android:id="@+id/politik"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_account_balance_white_24dp"
                 android:title="POLITIK" />
             <item
                 android:id="@+id/ekonomi"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_attach_money_white_24dp"
                 android:title="EKONOMI" />
             <item
                 android:id="@+id/hukum"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_gavel_white_24dp"
                 android:title="HUKUM" />
             <item
                 android:id="@+id/komunitas"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_people_white_24dp"
                 android:title="KOMUNITAS" />
             <item
                 android:id="@+id/budaya"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_accessibility_white_24dp"
                 android:title="BUDAYA" />
             <item
                 android:id="@+id/artikel"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_assignment_white_24dp"
                 android:title="ARTIKEL" />
             <item
                 android:id="@+id/olahraga"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_directions_bike_white_24dp"
                 android:title="OLAHRAGA" />
             <item
                 android:id="@+id/video"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_ondemand_video_white_24dp"
                 android:title="VIDEO" />
         </menu>
     </item>
+    <item
+        android:id="@+id/copyright"
+        android:title="© PALAPAPOS 2016"/>
 </menu>

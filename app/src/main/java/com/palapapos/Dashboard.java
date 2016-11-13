@@ -1,20 +1,13 @@
 package com.palapapos;
 
-import android.app.ActionBar;
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,7 +16,8 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
+
+import com.palapapos.Nasional.Nasional;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -93,23 +87,32 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
             case R.id.about_us:
-                myWebView.loadUrl("http://www.palapapos.co.id/about.html");
+                Intent about_us = new Intent(Dashboard.this, AboutUs.class);
+                startActivity(about_us);
                 return true;
             case R.id.privacy_policy:
-                myWebView.loadUrl("http://www.palapapos.co.id/privacy.html");
+                Intent privacy_policy = new Intent(Dashboard.this, PrivacyPolicy.class);
+                startActivity(privacy_policy);
                 return true;
             case R.id.term_of_use:
-                myWebView.loadUrl("http://www.palapapos.co.id/terms.html");
+                Intent term_of_use = new Intent(Dashboard.this, TermOfUse.class);
+                startActivity(term_of_use);
                 return true;
             case R.id.info_iklan:
-                myWebView.loadUrl("http://www.palapapos.co.id/info_iklan.html");
+                Intent info_iklan = new Intent(Dashboard.this, InfoIklan.class);
+                startActivity(info_iklan);
                 return true;
             case R.id.redaksi:
-                myWebView.loadUrl("http://www.palapapos.co.id/redaksi.html");
+                Intent redaksi = new Intent(Dashboard.this, Redaksi.class);
+                startActivity(redaksi);
                 return true;
             case R.id.contact_us:
-                myWebView.loadUrl("http://www.palapapos.co.id/contact.html");
+                Intent contact_us = new Intent(Dashboard.this, ContactUs.class);
+                startActivity(contact_us);
                 return true;
+            case R.id.exit:
+                finish();
+                System.exit(0);
             default:
                 return super.onOptionsItemSelected(item);
         }

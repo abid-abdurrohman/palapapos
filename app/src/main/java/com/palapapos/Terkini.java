@@ -56,7 +56,7 @@ public class Terkini extends AppCompatActivity {
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == android.R.id.home) {
-            startActivity(new Intent(Terkini.this, Dashboard.class));
+            //startActivity(new Intent(Terkini.this, Dashboard.class));
             finish();
         }
         return super.onOptionsItemSelected(item);

@@ -1,4 +1,4 @@
-package com.palapapos;
+package com.palapapos.Nasional;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.palapapos.R;
 
 public class NasionalTerkini extends Fragment {
 

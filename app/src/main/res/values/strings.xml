@@ -9,4 +9,10 @@
     <string name="title_activity_nasional">Nasional</string>
     <string name="title_activity_terkini">Berita Terkini</string>
     <string name="title_activity_terpopuler">Berita Terpopuler</string>
+    <string name="title_activity_about_us">About Us</string>
+    <string name="title_activity_privacy_policy">Privacy Policy</string>
+    <string name="title_activity_term_of_use">Term of Use</string>
+    <string name="title_activity_info_iklan">Info Iklan</string>
+    <string name="title_activity_redaksi">Redaksi</string>
+    <string name="title_activity_contact_us">Contact Us</string>
 </resources>

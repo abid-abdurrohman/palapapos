@@ -4,5 +4,5 @@
     android:id="@+id/webView"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.palapapos.NasionalTerpopuler"
+    tools:context="com.palapapos.Nasional.NasionalTerpopuler"
     />

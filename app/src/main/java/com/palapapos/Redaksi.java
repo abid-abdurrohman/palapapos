@@ -13,7 +13,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class Terpopuler extends AppCompatActivity {
+public class Redaksi extends AppCompatActivity {
 
     private WebView myWebView;
     @Override
@@ -44,7 +44,7 @@ public class Terpopuler extends AppCompatActivity {
 
         myWebView.requestFocusFromTouch();
         myWebView.setWebChromeClient(new WebChromeClient());
-        myWebView.loadUrl("http://www.palapapos.co.id/berita/all_popular.html");
+        myWebView.loadUrl("http://www.palapapos.co.id/redaksi.html");
 
         myWebView.setWebViewClient(new WebViewClient());
     }
@@ -56,7 +56,7 @@ public class Terpopuler extends AppCompatActivity {
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == android.R.id.home) {
-            //startActivity(new Intent(Terpopuler.this, Dashboard.class));
+            //startActivity(new Intent(Redaksi.this, Dashboard.class));
             finish();
         }
         return super.onOptionsItemSelected(item);
