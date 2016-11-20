@@ -3,7 +3,12 @@ package com.palapapos;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,17 +32,26 @@ import com.palapapos.Nasional.Nasional;
 import com.palapapos.Nusantara.Nusantara;
 import com.palapapos.Olahraga.Olahraga;
 import com.palapapos.Politik.Politik;
+import com.palapapos.Politik.PolitikTerkini;
+import com.palapapos.Politik.PolitikTerpopuler;
 import com.palapapos.Video.Video;
 
-public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.ArrayList;
+import java.util.List;
 
-    private WebView myWebView;
+public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -48,29 +62,47 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        myWebView = (WebView) findViewById(R.id.webView);
-        myWebView.getSettings().setJavaScriptEnabled(true);
-        WebSettings webSettings = myWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setBuiltInZoomControls(true);
-        webSettings.setDisplayZoomControls(false);
-        myWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
-        myWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        myWebView.getSettings().setAppCacheEnabled(true);
-        myWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        webSettings.setDomStorageEnabled(true);
-        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
-        webSettings.setUseWideViewPort(true);
-        webSettings.setSavePassword(true);
-        webSettings.setSaveFormData(true);
-        webSettings.setEnableSmoothTransition(true);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
 
-        myWebView.requestFocusFromTouch();
-        myWebView.setWebChromeClient(new WebChromeClient());
-        myWebView.loadUrl("http://www.palapapos.co.id/");
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+    }
 
-        myWebView.setWebViewClient(new WebViewClient());
+    private void setupViewPager(ViewPager viewPager) {
+        Dashboard.ViewPagerAdapter adapter = new Dashboard.ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new Terkini(), "Berita Terkini");
+        adapter.addFragment(new Terpopuler(), "Berita Terpopuler");
+        viewPager.setAdapter(adapter);
+    }
 
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
     }
 
     @Override
@@ -128,21 +160,13 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         }
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.home) {
-            myWebView.loadUrl("http://www.palapapos.co.id/");
-        } else if (id == R.id.berita_terkini) {
-            Intent i = new Intent(Dashboard.this, Terkini.class);
-            startActivity(i);
-        } else if (id == R.id.berita_terpopuler) {
-            Intent i = new Intent(Dashboard.this, Terpopuler.class);
-            startActivity(i);
-        } else if (id == R.id.nasional) {
+        }  else if (id == R.id.nasional) {
             Intent i = new Intent(Dashboard.this, Nasional.class);
             startActivity(i);
         } else if (id == R.id.nusantara) {
@@ -180,21 +204,5 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (event.getAction() == KeyEvent.ACTION_DOWN) {
-            switch (keyCode) {
-                case KeyEvent.KEYCODE_BACK:
-                    if (myWebView.canGoBack()) {
-                        myWebView.goBack();
-                    } else {
-                        finish();
-                    }
-                    return true;
-            }
-        }
-        return super.onKeyDown(keyCode, event);
     }
 }

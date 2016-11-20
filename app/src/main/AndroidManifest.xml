@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Splashscreen"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,105 +23,110 @@
         <activity
             android:name=".Dashboard"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Nasional.Nasional"
             android:label="@string/title_activity_nasional"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Nasional.NasionalTerkini" />
-        <activity android:name=".Nasional.NasionalTerpopuler" />
-        <activity
-            android:name=".Terkini"
-            android:label="@string/title_activity_terkini"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Terpopuler"
-            android:label="@string/title_activity_terpopuler"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".AboutUs"
             android:label="@string/title_activity_about_us"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".PrivacyPolicy"
             android:label="@string/title_activity_privacy_policy"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".TermOfUse"
             android:label="@string/title_activity_term_of_use"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".InfoIklan"
             android:label="@string/title_activity_info_iklan"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Redaksi"
             android:label="@string/title_activity_redaksi"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".ContactUs"
             android:label="@string/title_activity_contact_us"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Nusantara.Nusantara"
             android:label="@string/title_activity_nusantara"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Nusantara.NusantaraTerkini" />
-        <activity android:name=".Nusantara.NusantaraTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Megapolitan.Megapolitan"
             android:label="@string/title_activity_megapolitan"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Megapolitan.MegapolitanTerkini" />
-        <activity android:name=".Megapolitan.MegapolitanTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Politik.Politik"
             android:label="@string/title_activity_politik"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Politik.PolitikTerkini" />
-        <activity android:name=".Politik.PolitikTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Ekonomi.Ekonomi"
             android:label="@string/title_activity_ekonomi"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Ekonomi.EkonomiTerkini" />
-        <activity android:name=".Ekonomi.EkonomiTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Hukum.Hukum"
             android:label="@string/title_activity_hukum"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Hukum.HukumTerkini" />
-        <activity android:name=".Hukum.HukumTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Komunitas.Komunitas"
             android:label="@string/title_activity_komunitas"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Komunitas.KomunitasTerkini" />
-        <activity android:name=".Komunitas.KomunitasTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Budaya.Budaya"
             android:label="@string/title_activity_budaya"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Budaya.BudayaTerkini" />
-        <activity android:name=".Budaya.BudayaTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Artikel.Artikel"
             android:label="@string/title_activity_artikel"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Artikel.ArtikelTerkini" />
-        <activity android:name=".Artikel.ArtikelTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Olahraga.Olahraga"
             android:label="@string/title_activity_olahraga"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Olahraga.OlahragaTerkini" />
-        <activity android:name=".Olahraga.OlahragaTerpopuler" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".Video.Video"
             android:label="@string/title_activity_video"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Video.VideoTerkini" />
-        <activity android:name=".Video.VideoTerpopuler"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Dashboard"/>
     </application>
 
 </manifest>

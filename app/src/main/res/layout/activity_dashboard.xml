@@ -20,8 +20,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/activity_dashboard_drawer"
         app:headerLayout="@layout/nav_header_dashboard"
+        app:menu="@menu/activity_dashboard_drawer"
         android:background="?attr/colorPrimary"
         app:itemTextColor="@color/colorWhite"/>
 
