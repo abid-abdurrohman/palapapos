@@ -1,5 +1,6 @@
 package com.palapapos.Hukum;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,10 +15,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.palapapos.AboutUs;
+import com.palapapos.ContactUs;
 import com.palapapos.Ekonomi.Ekonomi;
+import com.palapapos.InfoIklan;
+import com.palapapos.Nasional.Nasional;
 import com.palapapos.Nasional.NasionalTerkini;
 import com.palapapos.Nasional.NasionalTerpopuler;
+import com.palapapos.PrivacyPolicy;
 import com.palapapos.R;
+import com.palapapos.Redaksi;
+import com.palapapos.TermOfUse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +39,7 @@ public class Hukum extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nasional);
+        setContentView(R.layout.activity_hukum);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -45,8 +53,9 @@ public class Hukum extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         Hukum.ViewPagerAdapter adapter = new Hukum.ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new HukumHome(), "Hukum");
         adapter.addFragment(new HukumTerkini(), "Berita Terkini");
-        adapter.addFragment(new HukumTerpopuler(), "Berita Terpopuler");
+        adapter.addFragment(new HukumTerpopuler(), "Berita Populer");
         viewPager.setAdapter(adapter);
     }
 
@@ -90,13 +99,39 @@ public class Hukum extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
-        if (id == android.R.id.home) {
-            //startActivity(new Intent(Nasional.this, Dashboard.class));
-            finish();
+        switch (item.getItemId()) {
+            case R.id.home:
+                finish();
+            case R.id.about_us:
+                Intent about_us = new Intent(Hukum.this, AboutUs.class);
+                startActivity(about_us);
+                return true;
+            case R.id.privacy_policy:
+                Intent privacy_policy = new Intent(Hukum.this, PrivacyPolicy.class);
+                startActivity(privacy_policy);
+                return true;
+            case R.id.term_of_use:
+                Intent term_of_use = new Intent(Hukum.this, TermOfUse.class);
+                startActivity(term_of_use);
+                return true;
+            case R.id.info_iklan:
+                Intent info_iklan = new Intent(Hukum.this, InfoIklan.class);
+                startActivity(info_iklan);
+                return true;
+            case R.id.redaksi:
+                Intent redaksi = new Intent(Hukum.this, Redaksi.class);
+                startActivity(redaksi);
+                return true;
+            case R.id.contact_us:
+                Intent contact_us = new Intent(Hukum.this, ContactUs.class);
+                startActivity(contact_us);
+                return true;
+            case R.id.exit:
+                finish();
+                System.exit(0);
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
 }

@@ -10,16 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
+        android:padding="30dp"
         >
         <ImageView
-            android:layout_width="350dp"
-            android:layout_height="52dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
             android:src="@drawable/palapapos"
+            android:gravity="center|bottom"
             />
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Version 1.0"
             android:gravity="center"/>
     </LinearLayout>

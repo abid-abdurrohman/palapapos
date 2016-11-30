@@ -1,4 +1,4 @@
-package com.palapapos.Artikel;
+package com.palapapos.Megapolitan;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +13,7 @@ import android.webkit.WebViewClient;
 
 import com.palapapos.R;
 
-public class ArtikelTerkini extends Fragment {
+public class MegapolitanHome extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class ArtikelTerkini extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.activity_nasional_terkini, container, false);
+        View rootView = inflater.inflate(R.layout.activity_megapolitan_home, container, false);
 
         WebView myWebView = (WebView) rootView.findViewById(R.id.webView);
         myWebView.getSettings().setJavaScriptEnabled(true);
@@ -45,7 +45,7 @@ public class ArtikelTerkini extends Fragment {
 
         myWebView.requestFocusFromTouch();
         myWebView.setWebChromeClient(new WebChromeClient());
-        myWebView.loadUrl("http://www.palapapos.co.id/palapapos/cat_recently_news/9.html");
+        myWebView.loadUrl("http://www.palapapos.co.id/kanal/3/megapolitan.html");
 
         myWebView.setWebViewClient(new WebViewClient());
 

@@ -43,6 +43,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private WebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mWebView = (WebView) findViewById(R.id.webView);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -71,8 +73,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     private void setupViewPager(ViewPager viewPager) {
         Dashboard.ViewPagerAdapter adapter = new Dashboard.ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new Home(), "Home");
         adapter.addFragment(new Terkini(), "Berita Terkini");
-        adapter.addFragment(new Terpopuler(), "Berita Terpopuler");
+        adapter.addFragment(new Terpopuler(), "Berita Populer");
         viewPager.setAdapter(adapter);
     }
 
@@ -106,13 +109,20 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     }
 
     @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+            switch (keyCode) {
+                case KeyEvent.KEYCODE_BACK:
+                    if (mWebView.canGoBack()) {
+                        mWebView.goBack();
+                    } else {
+                        finish();
+                    }
+                    return true;
+            }
+
         }
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override
