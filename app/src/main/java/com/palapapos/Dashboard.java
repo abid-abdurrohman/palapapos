@@ -2,7 +2,9 @@ package com.palapapos;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -43,7 +45,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private WebView mWebView;
+    private WebView myWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +55,13 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        mWebView = (WebView) findViewById(R.id.webView);
+        myWebView = (WebView) findViewById(R.id.webView);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
+        drawer.closeDrawers();
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -69,6 +72,17 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+//        FloatingActionButton myFab = (FloatingActionButton) findViewById(R.id.fab);
+//        myFab.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                myWebView.setWebViewClient(new WebViewClient() {
+//                    public void onPageFinished(WebView view, String url) {
+//                        view.scrollTo(0,0);
+//                    }
+//                });
+//            }
+//        });
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -113,8 +127,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
             switch (keyCode) {
                 case KeyEvent.KEYCODE_BACK:
-                    if (mWebView.canGoBack()) {
-                        mWebView.goBack();
+                    if (myWebView.canGoBack()) {
+                        myWebView.goBack();
                     } else {
                         finish();
                     }

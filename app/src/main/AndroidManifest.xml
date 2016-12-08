@@ -137,7 +137,7 @@
         <activity android:name=".Nusantara.NusantaraHome" />
         <activity android:name=".Olahraga.OlahragaHome" />
         <activity android:name=".Politik.PolitikHome" />
-        <activity android:name=".Ekonomi.EkonomiHome"></activity>
+        <activity android:name=".Ekonomi.EkonomiHome" />
     </application>
 
 </manifest>

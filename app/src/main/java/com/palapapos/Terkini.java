@@ -23,13 +23,15 @@ public class Terkini extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    private WebView myWebView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.activity_terkini, container, false);
 
-        WebView myWebView = (WebView) rootView.findViewById(R.id.webView);
+        myWebView = (WebView) rootView.findViewById(R.id.webView);
         myWebView.getSettings().setJavaScriptEnabled(true);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -52,6 +54,16 @@ public class Terkini extends Fragment {
 
         myWebView.setWebViewClient(new WebViewClient());
 
+//        FloatingActionButton myFab = (FloatingActionButton) rootView.findViewById(R.id.fab);
+//        myFab.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                myWebView.setWebViewClient(new WebViewClient() {
+//                    public void onPageFinished(WebView view, String url) {
+//                        view.scrollTo(0,0);
+//                    }
+//                });
+//            }
+//        });
         return rootView ;
     }
 

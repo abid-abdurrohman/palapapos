@@ -14,11 +14,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow" >
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
         <item name="overlapAnchor">false</item>
         <item name="android:dropDownVerticalOffset">-4.0dip</item>
     </style>
-    
+
     <style name="CustomOverflowBack" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
         <item name="android:popupBackground">@color/colorPrimary</item>
     </style>
