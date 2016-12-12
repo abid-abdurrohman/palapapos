@@ -23,7 +23,7 @@
         android:title="POLITIK" />
     <item
         android:id="@+id/ekonomi"
-        android:icon="@drawable/ic_attach_money_white_24dp"
+        android:icon="@drawable/rp_white"
         android:title="EKONOMI" />
     <item
         android:id="@+id/hukum"

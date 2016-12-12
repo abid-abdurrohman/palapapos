@@ -67,4 +67,12 @@ public class Terkini extends Fragment {
         return rootView ;
     }
 
+    public void myOnKeyDown(int key_code){
+        if (myWebView.canGoBack()) {
+            myWebView.goBack();
+        } else {
+            getActivity().finish();
+        }
+    }
+
 }

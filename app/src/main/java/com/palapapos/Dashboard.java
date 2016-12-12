@@ -122,22 +122,15 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         }
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (event.getAction() == KeyEvent.ACTION_DOWN) {
-            switch (keyCode) {
-                case KeyEvent.KEYCODE_BACK:
-                    if (myWebView.canGoBack()) {
-                        myWebView.goBack();
-                    } else {
-                        finish();
-                    }
-                    return true;
-            }
-
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (keyCode == KeyEvent.KEYCODE_MENU) {
+//            ((Home)fragments.get(0)).myOnKeyDown(keyCode);
+//            ((Terkini)fragments.get(1)).myOnKeyDown(keyCode);
+//            ((Terpopuler)fragments.get(2)).myOnKeyDown(keyCode);
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
